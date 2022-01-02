@@ -50,7 +50,7 @@ d3.json(url).then(function(response) {
                 // radius is reflected by the magnitude of the earthquake
                 radius: earthquake.properties.mag*5
 
-            }).addTo(myMap);
+            }).bindPopup("<h4>Location: " + earthquake.properties.place + "</h4> <hr> <h5>Magnitude: " + earthquake.properties.mag + "  Depth: " + earthquake.geometry.coordinates[2]+ " km</h5>").addTo(myMap);
         }
       }
 
